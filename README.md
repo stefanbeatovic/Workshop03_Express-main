@@ -202,13 +202,13 @@ Complete the following tasks in order:
 ## Testing Your Implementation
 
 ### Manual Testing Checklist
-- [ ] Server starts without errors
-- [ ] Home page loads at `http://localhost:3000`
-- [ ] About page loads at `/about`
-- [ ] Contact page loads at `/contact`
-- [ ] CSS styles are applied correctly
-- [ ] Custom 404 page appears for invalid URLs
-- [ ] `/api/time` returns JSON with current time
+- [x] Server starts without errors
+- [x] Home page loads at `http://localhost:3000`
+- [x] About page loads at `/about`
+- [x] Contact page loads at `/contact`
+- [x] CSS styles are applied correctly
+- [x] Custom 404 page appears for invalid URLs
+- [x] `/api/time` returns JSON with current time
 - [ ] (Bonus) Routes are organized using Express Router
 
 ---

@@ -107,30 +107,37 @@ app.use('/api', apiRouter);
 // 404 Handler - Must be placed AFTER all other routes
 // This catches any requests that don't match the routes above
 // TODO: Complete:
-/*
 app.use((req, res) => {
-    complete this line - res.status(404)....);
+    const errorPage = path.join(__dirname, 'public', '404.html');
+
+    res.status(404).sendFile(errorPage, (err) => {
+        if (err) {
+            res.type('text/plain').send('404 - Page Not Found');
+        }
+    });
 });
-*/
 
 
 // 500 Error Handler - Must be placed LAST
 // This catches any errors that occur in your application
 // Note: Error handling middleware has 4 parameters: (err, req, res, next)
 // TODO: Complete:
-/*
 app.use((err, req, res, next) => {
     console.error('Server Error:', err.stack);
-    complete this line - res.status(500)....);
+    const errorPage = path.join(__dirname, 'public', '500.html');
+
+    res.status(500).sendFile(errorPage, (sendFileError) => {
+        if (sendFileError) {
+            res.type('text/plain').send('500 - Internal Server Error');
+        }
+    });
 });
-*/
 
 
 // ========================================
 // Start the Server
 // ========================================
 // TODO: Uncomment the code below to start the server:
-/*
 app.listen(PORT, () => {
     console.log(`✅ Server is running on http://localhost:${PORT}`);
     console.log('\n📍 Available routes:');
@@ -140,7 +147,6 @@ app.listen(PORT, () => {
     console.log('  GET /api/time      -> Current date/time API');
     console.log('\n⏹️  Press Ctrl+C to stop the server\n');
 });
-*/
 
 // ========================================
 // 🎯 IMPLEMENTATION TIPS

@@ -9,7 +9,7 @@ This project demonstrates an Express.js web server with routing and middleware c
 ✅ **Task 3**: Route handlers for HTML pages (index, about, contact)  
 ✅ **Task 4**: `/api/time` JSON endpoint returning current date/time  
 ✅ **Task 5**: Custom error handling middleware (404 and 500)  
-✅ **Task 6** (Bonus): Routes organized using Express Router  
+⬜ **Bonus**: Routes organized using Express Router (optional, not implemented)  
 
 ## Project Structure
 
