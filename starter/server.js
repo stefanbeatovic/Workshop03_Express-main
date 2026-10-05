@@ -5,6 +5,7 @@ const path = require('path');
 // TODO: Task 1 - Create Express App
 // ========================================
 // Step 1: Create an Express application instance
+const app = express();
 
 const PORT = process.env.PORT || 3000;
 
@@ -14,6 +15,7 @@ const PORT = process.env.PORT || 3000;
 // Configure Express to serve static files from the 'public' directory
 // This middleware automatically serves HTML, CSS, images, etc.
 // Hint: This single line replaces all the file reading logic from Workshop 02!
+app.use(express.static('public'));
 
 
 // ========================================
@@ -36,16 +38,25 @@ app.use((req, res, next) => {
 // About home route
 // TODO: Create a GET route for '/'
 // Hint: serve 'index.html'
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 
 // About page route
 // TODO: Create a GET route for '/about'
 // Hint: Similar to the home page route, but serve 'about.html'
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'about.html'));
+});
 
 
 // Contact page route
 // TODO: Create a GET route for '/contact'
 // Hint: Similar to the home page route, but serve 'contact.html'
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'contact.html'));
+});
 
 
 // ========================================
